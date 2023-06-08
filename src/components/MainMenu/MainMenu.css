@@ -1,0 +1,148 @@
+.main-menu {
+  background-color: #ffffff;
+  position: absolute;
+  top: 80px;
+  width: 227px;
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid #d1d1d1;
+  user-select: none;
+  padding-inline: 16px;
+  color: #7882A4;
+  z-index: 3;
+}
+
+.navbar {
+  margin-top: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: #7882A4;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-inline: 16px;
+}
+
+.navbar-item:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}
+
+.navbar-logo {
+  width: 32px;
+  margin-right: 16px;
+}
+
+.navbar-li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.user-options {
+  position: fixed;
+  bottom: 24px;
+}
+
+.user-options-item {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  border-radius: 10px;
+  padding: 8px;
+  padding-inline: 16px;
+}
+
+.user-options-item:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}
+
+.user-options-logo {
+  width: 26px;
+  margin-right: 16px;
+}
+
+.user-options-li {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+/* Dark Theme */
+
+.main-menu-dark-theme {
+  background-color: #312e2b;
+  border-right: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.navbar-item-dark-theme:hover {
+  background-color: #555555;
+  cursor: pointer;
+}
+
+.user-options-item-dark-theme:hover {
+  background-color: #555555;
+  cursor: pointer;
+}
+
+.link-dark-theme {
+  color: #fff;
+}
+
+/* Link */
+.link-active {
+  background-color: rgba(221,244,255);
+  border: 2px solid rgb(132,216,255);
+  color: rgb(28,176,246);
+  padding: 8px;
+  padding-inline: 14px;
+}
+
+.link-active:hover {
+  background-color: rgba(221,244,255);
+}
+
+.user-link-active {
+  background-color: rgba(221,244,255);
+  border: 2px solid rgb(132,216,255);
+  color: rgb(28,176,246);
+  padding: 6px;
+  padding-inline: 14px;
+}
+
+.user-link-active:hover {
+  background-color: rgba(221,244,255);
+}
+
+/* Link Dark Theme */
+.link-active-dark-theme {
+  background-color: rgb(29, 29, 29);
+  border: 2px solid rgb(122, 122, 122);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  padding-inline: 14px;
+}
+
+.link-active-dark-theme:hover {
+  background-color: rgba(29, 29, 29);
+}
+
+.user-link-active-dark-theme {
+  background-color: rgba(29, 29, 29);
+  border: 2px solid rgb(122, 122, 122);
+  color: rgb(255, 255, 255);
+  padding: 6px;
+  padding-inline: 14px;
+}
+
+.user-link-active-dark-theme:hover {
+  background-color: rgba(29, 29, 29);
+}
