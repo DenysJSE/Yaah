@@ -1,9 +1,13 @@
 import './Academy.css'
 
-function Academy() {
+interface HeaderProps {
+  isWhiteTheme: boolean;
+}
+
+function Academy({isWhiteTheme}: HeaderProps) {
   return (
-    <div className="academy">
-      <h1>It is Academy</h1>
+    <div className={`academy ${isWhiteTheme ? '' : 'academy-dark-theme'}`}>
+      <h1 className='text'>It is Academy</h1>
     </div>
   )
 }

@@ -1,7 +1,13 @@
-function PageNotFound() {
+import './PageNotFound.css';
+
+interface HeaderProps {
+  isWhiteTheme: boolean;
+}
+
+function PageNotFound({isWhiteTheme}: HeaderProps) {
   return (
-    <div>
-      <h1>Page is not found</h1>
+    <div className={`page-not-found ${isWhiteTheme ? '' : 'page-not-found-dark-theme'}`}>
+      <h1 className="text">Page is not found</h1>
     </div>
   )
 }

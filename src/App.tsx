@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './App.css'
 import Header from './components/Header/Header.tsx'
 import MainMenu from './components/MainMenu/MainMenu.tsx'
@@ -14,12 +14,22 @@ import Shop from './components/Shop/Shop.tsx';
 import Email from './components/Email/Email.tsx';
 import Info from './components/Info/Info.tsx';
 import Settings from './components/Settings/Settings.tsx';
+import { ThemeContext } from './store/ThemeComponentProvider.tsx';
 
 function App() {
-  const [isWhiteTheme, setIsWhiteTheme] = useState(true);
+  const [isWhiteTheme, setIsWhiteTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme === 'light' : true;
+  });
+  const { toggleTheme } = useContext(ThemeContext);
 
   const handleThemeChange = () => {
-    setIsWhiteTheme(!isWhiteTheme);
+    setIsWhiteTheme((prevTheme) => {
+      const newTheme = !prevTheme;
+      localStorage.setItem('theme', newTheme ? 'light' : 'dark');
+      toggleTheme();
+      return newTheme;
+    });
   };
 
   return (
@@ -29,17 +39,17 @@ function App() {
         <MainMenu isWhiteTheme={isWhiteTheme} handleThemeChange={handleThemeChange} />
           <div className='content'>
             <Routes>
-              <Route path='/' element={<Main />} />
-              <Route path='login' element={<Login />} />
-              <Route path='academy' element={<Academy />} />
-              <Route path='lab' element={<Lab />} />
-              <Route path='league' element={<Leagues />} />
-              <Route path='shop' element={<Shop />} />
-              <Route path='email' element={<Email />} />
-              <Route path='info' element={<Info />} />
-              <Route path='user-cab' element={<UserCab />} />
-              <Route path='settings' element={<Settings />} />
-              <Route path='*' element={<PageNotFound />} />
+              <Route path='/' element={<Main isWhiteTheme={isWhiteTheme} />} />
+              <Route path='login' element={<Login isWhiteTheme={isWhiteTheme} />} />
+              <Route path='academy' element={<Academy isWhiteTheme={isWhiteTheme} />} />
+              <Route path='lab' element={<Lab isWhiteTheme={isWhiteTheme} />} />
+              <Route path='league' element={<Leagues isWhiteTheme={isWhiteTheme} />} />
+              <Route path='shop' element={<Shop isWhiteTheme={isWhiteTheme} />} />
+              <Route path='email' element={<Email isWhiteTheme={isWhiteTheme} />} />
+              <Route path='info' element={<Info isWhiteTheme={isWhiteTheme} />} />
+              <Route path='user-cab' element={<UserCab isWhiteTheme={isWhiteTheme} />} />
+              <Route path='settings' element={<Settings isWhiteTheme={isWhiteTheme} />} />
+              <Route path='*' element={<PageNotFound isWhiteTheme={isWhiteTheme} />} />
             </Routes>
           </div>
       </>

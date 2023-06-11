@@ -1,8 +1,13 @@
+import './Main.css';
 
-function Main() {
+interface HeaderProps {
+  isWhiteTheme: boolean;
+}
+
+function Main({isWhiteTheme}: HeaderProps) {
   return (
-    <div>
-      <h1>It is Main</h1>
+    <div className={`main-page ${isWhiteTheme ? '' : 'main-page-dark-theme'}`}>
+      <h1 className='text'>It is Main</h1>
     </div>
   )
 }

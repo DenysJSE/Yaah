@@ -1,4 +1,4 @@
-.academy {
+.lab {
   background-color: #fff;
   min-height: 100%;
 }
@@ -9,7 +9,7 @@
 }
 
 /* Dark Theme */
-.academy-dark-theme {
+.lab-dark-theme {
   background-color: #312e2b;
   color: #fff;
 }

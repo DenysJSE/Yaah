@@ -1,7 +1,13 @@
-function Info() {
+import './Info.css';
+
+interface HeaderProps {
+  isWhiteTheme: boolean;
+}
+
+function Info({isWhiteTheme}: HeaderProps) {
   return (
-    <div>
-      <h1>It is Info</h1>
+    <div className={`info-page ${isWhiteTheme ? '' : 'info-page-dark-theme'}`}>
+      <h1 className='text'>It is Info</h1>
     </div>
   )
 }

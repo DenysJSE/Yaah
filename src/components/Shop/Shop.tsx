@@ -1,7 +1,13 @@
-function Lab() {
+import './Shop.css';
+
+interface HeaderProps {
+  isWhiteTheme: boolean;
+}
+
+function Lab({isWhiteTheme}: HeaderProps) {
   return (
-    <div>
-      <h1>It is Shop</h1>
+    <div className={`shop ${isWhiteTheme ? '' : 'shop-dark-theme'}`}>
+      <h1 className='text'>It is Shop</h1>
     </div>
   )
 }
