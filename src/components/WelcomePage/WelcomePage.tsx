@@ -1,4 +1,4 @@
-function Lab() {
+function WelcomePage() {
   return (
     <div>
       <h1>It is Welcome Page</h1>
@@ -6,4 +6,4 @@ function Lab() {
   )
 }
 
-export default Lab
+export default WelcomePage

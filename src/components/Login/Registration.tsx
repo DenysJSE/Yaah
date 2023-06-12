@@ -1,4 +1,4 @@
-function Lab() {
+function Registration() {
   return (
     <div>
       <h1>It is Registration Form</h1>
@@ -6,4 +6,4 @@ function Lab() {
   )
 }
 
-export default Lab
+export default Registration

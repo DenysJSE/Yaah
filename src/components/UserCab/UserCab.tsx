@@ -5,7 +5,7 @@ interface HeaderProps {
   isWhiteTheme: boolean;
 }
 
-function Lab({isWhiteTheme}: HeaderProps) {
+function UserCab({isWhiteTheme}: HeaderProps) {
   return (
     <div className={`page ${isWhiteTheme ? '' : 'user-cab-dark-theme'}`}>
       <h1>It is UserCab</h1>
@@ -13,4 +13,4 @@ function Lab({isWhiteTheme}: HeaderProps) {
   )
 }
 
-export default Lab
+export default UserCab

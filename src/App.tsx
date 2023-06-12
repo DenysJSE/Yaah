@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './App.css'
 import Header from './components/Header/Header.tsx'
 import MainMenu from './components/MainMenu/MainMenu.tsx'
@@ -22,7 +22,14 @@ function App() {
     return savedTheme ? savedTheme === 'light' : true;
   });
   const { toggleTheme } = useContext(ThemeContext);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(() => {
+    const savedIsLogin = localStorage.getItem('isLogin');
+    return savedIsLogin ? savedIsLogin === 'true' : false;
+  });
+  const [lastLoginTime, setLastLoginTime] = useState(() => {
+    const savedTime = localStorage.getItem('lastLoginTime');
+    return savedTime ? Number(savedTime) : null;
+  });
 
   const handleThemeChange = () => {
     setIsWhiteTheme((prevTheme) => {
@@ -35,11 +42,29 @@ function App() {
 
   const handleLogin = () => {
     setIsLogin(true);
-  }
+    localStorage.setItem('isLogin', 'true');
+    localStorage.setItem('lastLoginTime', String(Date.now()));
+  };
 
   const handleLogout = () => {
     setIsLogin(false);
-  }
+    localStorage.setItem('isLogin', 'false');
+    localStorage.removeItem('lastLoginTime');
+  };
+
+  useEffect(() => {
+    const checkLoginTimeout = () => {
+      const ONE_DAY = 24 * 60 * 60 * 1000;
+      const currentTime = Date.now();
+      if (lastLoginTime && currentTime - lastLoginTime >= ONE_DAY) {
+        setIsLogin(false);
+        localStorage.setItem('isLogin', 'false');
+        localStorage.removeItem('lastLoginTime');
+      }
+    };
+
+    checkLoginTimeout();
+  }, [lastLoginTime]);
 
   return (
     <BrowserRouter>

@@ -8,7 +8,7 @@ interface LoginProps {
   handleLogin: () => void;
 }
 
-function Lab({ isWhiteTheme, handleLogin}: LoginProps) {
+function Login({ isWhiteTheme, handleLogin}: LoginProps) {
 
   const [isButtonActive, setIsButtonActive] = useState(false);
 
@@ -38,4 +38,4 @@ function Lab({ isWhiteTheme, handleLogin}: LoginProps) {
   )
 }
 
-export default Lab
+export default Login
