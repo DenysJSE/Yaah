@@ -1,4 +1,5 @@
-import './Leagues.css'
+import './Leagues.css';
+import '../../App.css';
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Lab({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`leagues ${isWhiteTheme ? '' : 'leagues-dark-theme'}`}>
-      <h1 className='text'>It is League</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'leagues-dark-theme'}`}>
+      <h1>It is League</h1>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import './Setting.css'
+import '../../App.css'
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Settings({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`settings ${isWhiteTheme ? '' : 'settings-dark-theme'}`}>
-      <h1 className='text'>It is Settings</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'settings-dark-theme'}`}>
+      <h1>It is Settings</h1>
     </div>
   )
 }

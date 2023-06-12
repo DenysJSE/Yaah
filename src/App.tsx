@@ -22,6 +22,7 @@ function App() {
     return savedTheme ? savedTheme === 'light' : true;
   });
   const { toggleTheme } = useContext(ThemeContext);
+  const [isLogin, setIsLogin] = useState(false);
 
   const handleThemeChange = () => {
     setIsWhiteTheme((prevTheme) => {
@@ -32,15 +33,35 @@ function App() {
     });
   };
 
+  const handleLogin = () => {
+    setIsLogin(true);
+  }
+
+  const handleLogout = () => {
+    setIsLogin(false);
+  }
+
   return (
     <BrowserRouter>
       <>
         <Header isWhiteTheme={isWhiteTheme} />
-        <MainMenu isWhiteTheme={isWhiteTheme} handleThemeChange={handleThemeChange} />
+        <MainMenu 
+          isWhiteTheme={isWhiteTheme} 
+          handleThemeChange={handleThemeChange} 
+          isLogin={isLogin} 
+          handleLogin={handleLogin}
+          handleLogout={handleLogout}
+        />
           <div className='content'>
             <Routes>
               <Route path='/' element={<Main isWhiteTheme={isWhiteTheme} />} />
-              <Route path='login' element={<Login isWhiteTheme={isWhiteTheme} />} />
+              <Route 
+                path='login' 
+                element={<Login 
+                  isWhiteTheme={isWhiteTheme}
+                  handleLogin={handleLogin}
+                />} 
+              />
               <Route path='academy' element={<Academy isWhiteTheme={isWhiteTheme} />} />
               <Route path='lab' element={<Lab isWhiteTheme={isWhiteTheme} />} />
               <Route path='league' element={<Leagues isWhiteTheme={isWhiteTheme} />} />

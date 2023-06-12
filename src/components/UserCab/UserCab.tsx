@@ -1,4 +1,5 @@
 import './UserCab.css';
+import '../../App.css'
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Lab({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`user-cab ${isWhiteTheme ? '' : 'user-cab-dark-theme'}`}>
-      <h1 className="text">It is UserCab</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'user-cab-dark-theme'}`}>
+      <h1>It is UserCab</h1>
     </div>
   )
 }

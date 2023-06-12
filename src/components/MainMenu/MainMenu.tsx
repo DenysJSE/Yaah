@@ -14,10 +14,13 @@ import Exit from '../../images/logout.png'
 
 interface MainMenuProps {
   isWhiteTheme: boolean;
+  isLogin: boolean;
   handleThemeChange: () => void;
+  handleLogin: () => void;
+  handleLogout: () => void;
 }
 
-function MainMenu({ isWhiteTheme, handleThemeChange }: MainMenuProps) {
+function MainMenu({ isWhiteTheme, handleThemeChange, isLogin, handleLogin, handleLogout }: MainMenuProps) {
 
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const location = useLocation();
@@ -87,22 +90,39 @@ function MainMenu({ isWhiteTheme, handleThemeChange }: MainMenuProps) {
             <img src={ChangeTheme} alt="AcademyLogo" className='user-options-logo' />
             <li className='user-options-li'>{isWhiteTheme ? 'Змінити день' : 'Змінити ніч'}</li>
           </div>
-          <Link to="/user-cab" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
-            <div className={getItemUserOptionsClass('/user-cab')} onClick={() => setActiveItem('/user-cab')}>
-              <img src={UserAccount} alt="AcademyLogo" className='user-options-logo' />
-              <li className='user-options-li'>Робітня</li>
-            </div>
-          </Link>
-          <Link to="/settings" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+          {isLogin ? (
+            <Link to="/user-cab" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+              <div className={getItemUserOptionsClass('/user-cab')} onClick={() => {
+                setActiveItem('/user-cab');
+                handleLogin();
+              }}>
+                <img src={UserAccount} alt="AcademyLogo" className='user-options-logo' />
+                <li className='user-options-li'>Робітня</li>
+              </div>
+            </Link>
+          ) : (
+            <Link to="/login" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+              <div className={getItemUserOptionsClass('/login-form')} onClick={() => setActiveItem('/login-form')}>
+                <img src={UserAccount} alt="AcademyLogo" className='user-options-logo' />
+                <li className='user-options-li'>Приєднатися</li>
+              </div>
+            </Link>
+          )}
+          {isLogin && <Link to="/settings" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
           <div className={getItemUserOptionsClass('/settings')} onClick={() => setActiveItem('/settings')}>
             <img src={Options} alt="AcademyLogo" className='user-options-logo' />
             <li className='user-options-li'>Налаштування</li>
           </div>
-          </Link>
-          <div className={`user-options-item ${isWhiteTheme ? 'white-theme' : 'user-options-item-dark-theme'}`}>
-            <img src={Exit} alt="AcademyLogo" className='user-options-logo' />
-            <li className='user-options-li'>Вийти</li>
-          </div>
+          </Link>}
+          {isLogin && <Link to="/" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+            <div 
+              className={`user-options-item ${isWhiteTheme ? 'white-theme' : 'user-options-item-dark-theme'}`}
+              onClick={handleLogout}
+            >
+              <img src={Exit} alt="AcademyLogo" className='user-options-logo' />
+              <li className='user-options-li'>Вийти</li>
+            </div>
+          </Link>}
         </ul>
       </div>
     </div>

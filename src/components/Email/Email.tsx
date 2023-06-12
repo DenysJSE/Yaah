@@ -1,4 +1,5 @@
 import './Email.css';
+import '../../App.css'
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Email({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`email-page ${isWhiteTheme ? '' : 'email-page-dark-theme'}`}>
-      <h1 className='text'>It is Email</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'email-page-dark-theme'}`}>
+      <h1>It is Email</h1>
     </div>
   )
 }

@@ -124,15 +124,14 @@
 
 /* Link Dark Theme */
 .link-active-dark-theme {
-  background-color: rgb(29, 29, 29);
-  border: 2px solid rgb(122, 122, 122);
+  border: 2px solid rgb(132,216,255);
   color: rgb(255, 255, 255);
   padding: 8px;
   padding-inline: 14px;
 }
 
 .link-active-dark-theme:hover {
-  background-color: rgba(29, 29, 29);
+  background-color: #312e2b;
 }
 
 .user-link-active-dark-theme {

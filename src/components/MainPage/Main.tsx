@@ -1,4 +1,5 @@
 import './Main.css';
+import '../../App.css'
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Main({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`main-page ${isWhiteTheme ? '' : 'main-page-dark-theme'}`}>
-      <h1 className='text'>It is Main</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'main-page-dark-theme'}`}>
+      <h1>It is Main</h1>
     </div>
   )
 }

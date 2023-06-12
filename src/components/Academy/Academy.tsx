@@ -1,4 +1,5 @@
 import './Academy.css'
+import '../../App.css'
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -6,8 +7,8 @@ interface HeaderProps {
 
 function Academy({isWhiteTheme}: HeaderProps) {
   return (
-    <div className={`academy ${isWhiteTheme ? '' : 'academy-dark-theme'}`}>
-      <h1 className='text'>It is Academy</h1>
+    <div className={`page ${isWhiteTheme ? '' : 'academy-dark-theme'}`}>
+      <h1>It is Academy</h1>
     </div>
   )
 }

@@ -15,7 +15,7 @@ function Header({ isWhiteTheme }: HeaderProps) {
     <div className={`header ${isWhiteTheme ? 'white-theme' : 'header-dark-theme'}`}>
       <div className='title'>
         <Link to="/" className="link">
-          <h1 className='title-text'>Yaah</h1>
+          <h1 className={`title-text ${isWhiteTheme ? '' : 'title-text-dark-theme'}`}>Yaah</h1>
         </Link>
         
       </div>
