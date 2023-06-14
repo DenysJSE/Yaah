@@ -19,6 +19,157 @@
   background-color: #5c5c5c;
 }
 
+.mane-page {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.user-description {
+  display: flex;
+  align-items: center;
+}
+
+.user-logo {
+  width: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.user-name h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-facultet h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-rank h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-description-span {
+  font-weight: 500;
+  color: #C0A080;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.user-awards {
+  margin-top: 20px;
+}
+
+.awards-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.awards-icons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.award-icon {
+  width: 120px;
+  margin-right: 30px;
+}
+
+.more-awards {
+  text-align: center;
+  color: #C0A080;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.statistic-news {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.award-list-item {
+  margin-top: 24px;
+  width: 450px;
+  align-items: center;
+  font-weight: 500;
+}
+
+
+.award-progres {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  position: relative;
+}
+
+.award-progress-span {
+  left: 50%;
+  letter-spacing: .8px;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 700;
+  color: #A5A5A5;
+  z-index: 2;
+}
+
+.award-progres-passed {
+  width: 150px;
+  height: 20px;
+  background-color: #44D910;
+  border-radius: 50px;
+  position: relative;
+}
+
+.award-progres-passed-blick {
+  background: #7DE858;
+  border-radius: inherit;
+  height: 30%;
+  left: 10px;
+  position: absolute;
+  top: 25%;
+  width: calc(100% - 20px);
+}
+
+.award-progres-passed.tests {
+  width: 130px;
+}
+
+.award-progres-passed.tests-passed {
+  width: 400px;
+}
+
+.award-progres-passed.rate {
+  width: 380px;
+}
+
+.award-list-item.last {
+  margin-bottom: 20px;
+}
+
+.news-list {
+  margin-top: 10px;
+}
+
+.news-item {
+  padding: 15px;
+  padding-inline: 30px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.news-item:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.news-item.last {
+  margin-bottom: 20px;
+}
 
 /* Dark Theme */
 .main-page-dark-theme {

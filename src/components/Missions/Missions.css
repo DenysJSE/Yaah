@@ -88,7 +88,6 @@
   border-radius: inherit;
   height: 30%;
   left: 10px;
-  max-width: calc(100% - 10px);
   position: absolute;
   top: 25%;
   width: calc(100% - 20px);
