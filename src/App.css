@@ -13,6 +13,7 @@ body::-webkit-scrollbar {
 }
 
 .page {
+  width: calc(100vw - 260px - 350px - 80px); /* (100% екрану - ліве меню - місії - падінги сторінки */
   background-color: #fff;
   position: absolute;
   top: 80px;

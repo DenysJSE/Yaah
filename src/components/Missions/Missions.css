@@ -1,0 +1,114 @@
+.missions {
+  background-color: #ffffff;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 317px;
+  height: calc(100vh - 80px);
+  position: fixed;
+  border-left: 1px solid #d1d1d1;
+  user-select: none;
+  padding-inline: 16px;
+  color: #7882A4;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.missions-title {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.missions-text-isnotlogin {
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.missions-list {
+  display: grid;
+  gap: 16px;
+}
+
+.missions-list-item {
+  margin-top: 24px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  font-weight: 500;
+}
+
+.missions-logo {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 50px;
+}
+
+.mission-title {
+  margin-left: 20px;
+}
+
+.mission-progres {
+  grid-column: 2;
+  grid-row: 2;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.progress-span {
+  left: 50%;
+  letter-spacing: .8px;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 700;
+  color: #A5A5A5;
+  z-index: 2;
+}
+
+.mission-progres-passed {
+  width: 50px;
+  height: 20px;
+  background-color: #FFC700;
+  border-radius: 50px;
+  position: relative;
+}
+
+.mission-progres-passed-blick {
+  background: #FFD600;
+  border-radius: inherit;
+  height: 30%;
+  left: 10px;
+  max-width: calc(100% - 10px);
+  position: absolute;
+  top: 25%;
+  width: calc(100% - 20px);
+}
+
+.mission-progres-passed.diamonds {
+  width: 180px;
+}
+
+.mission-progres-passed.coins {
+  width: 240px;
+}
+
+.mission-progres-passed.scrolls {
+  width: 120px;
+}
+
+/* Dark Theme */
+.missions-dark-theme {
+  background-color: #312e2b;
+  border-left: 1px solid #ffffff;
+  color: #ffffff;
+}
