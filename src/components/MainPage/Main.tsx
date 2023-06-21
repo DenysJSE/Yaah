@@ -1,33 +1,26 @@
-import './Main.css';
-import '../../App.css'
-import UserLogo from '../../images/photo_2023-04-20_14-25-32.jpg'
-import Award1 from '../../images/Award1.png'
-import Award2 from '../../images/Award2.png'
-import Award3 from '../../images/Award3.png'
-import Biology from '../../images/Biology.png'
-import Chemistry from '../../images/Chemistry.png'
-import English from '../../images/English.png'
-import Geography from '../../images/Geography.png'
-import History from '../../images/History.png'
+import "./Main.css";
+import "../../App.css";
+import Award1 from "../../images/Award1.png";
+import Award2 from "../../images/Award2.png";
+import Award3 from "../../images/Award3.png";
+import History from "../../images/History.png";
+import User1 from "../../images/photo1.jpg";
+import User2 from "../../images/photo2.jpg";
 
 interface HeaderProps {
   isWhiteTheme: boolean;
 }
 
-function Main({isWhiteTheme}: HeaderProps) {
+function Main({ isWhiteTheme }: HeaderProps) {
   return (
-    <div className={`page ${isWhiteTheme ? '' : 'main-page-dark-theme'}`}>
-      <div className='mane-page'>
-        <div className='user-description'>
-          <div className='user-logo-item'><img src={UserLogo} alt="user-logo" className='user-logo' /></div>
-          <div className='user-description-item'>
-            <div className='user-name'><h2>DenysMut</h2></div>
-            <div className='user-facultet'><h2>Факультет: <span className='user-description-span'>Faculta de Lita</span></h2></div>
-            <div className='user-rank'><h2>Звання: <span className='user-description-span'>Шукач</span></h2></div>
-          </div>
-        </div>
+    <div className={`page ${isWhiteTheme ? "" : "main-page-dark-theme"}`}>
+      <div className="main-page">
         <div className="current-course">
-          <img src={History} alt="history-icon" className='curent-course-icon' />
+          <img
+            src={History}
+            alt="history-icon"
+            className="curent-course-icon"
+          />
           <div className="main-information">
             <div className="course-name">
               <h1>Faculta de Lita</h1>
@@ -38,9 +31,9 @@ function Main({isWhiteTheme}: HeaderProps) {
                   Пройдено уроків
                 </div>
                 <div className="progress-bar">
-                  <div className='lessons-progres'>
-                    <span className='lessons-progress-span'>40 / 100</span>
-                    <div className='lessons-progres-passed lessons'></div>
+                  <div className="lessons-progres">
+                    <span className="lessons-progress-span">40 / 100</span>
+                    <div className="lessons-progres-passed lessons"></div>
                   </div>
                 </div>
                 <div className="academy-link">
@@ -52,44 +45,112 @@ function Main({isWhiteTheme}: HeaderProps) {
                   Пройдено тестів
                 </div>
                 <div className="progress-bar">
-                  <div className='lessons-progres'>
-                    <span className='lessons-progress-span'>23 / 100</span>
-                    <div className='lessons-progres-passed tests'></div>
+                  <div className="lessons-progres">
+                    <span className="lessons-progress-span">23 / 100</span>
+                    <div className="lessons-progres-passed tests"></div>
                   </div>
                 </div>
                 <div className="academy-link">
-                  <span className="academy-link-span">Перейти в Лабораторію</span>
+                  <span className="academy-link-span">
+                    Перейти в Лабораторію
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='user-awards'>
-          <h2 className='awards-title'>Твої досягнення</h2>
-          <div className='awards-icons'>
-            <img src={Award1} alt="award1" className='award-icon'/>
-            <img src={Award2} alt="award2" className='award-icon'/>
-            <img src={Award3} alt="award3" className='award-icon'/>
-            <img src={Award1} alt="award4" className='award-icon isnot-get'/>
-            <img src={Award2} alt="award5" className='award-icon isnot-get'/>
-            <img src={Award3} alt="award6" className='award-icon isnot-get'/>
-            <img src={Award1} alt="award6" className='award-icon isnot-get'/>
-            <img src={Award2} alt="award6" className='award-icon isnot-get'/>
-            <img src={Award3} alt="award6" className='award-icon isnot-get'/>
+        <div className="awards-league">
+          <div className="user-awards">
+            <h2 className="awards-title">Досягнення</h2>
+            <div className="awards-icons">
+              <img src={Award1} alt="award1" className="award-icon" />
+              <img src={Award2} alt="award2" className="award-icon" />
+              <img src={Award3} alt="award3" className="award-icon" />
+              <img src={Award1} alt="award4" className="award-icon" />
+              <img src={Award2} alt="award5" className="award-icon" />
+              <img src={Award3} alt="award6" className="award-icon" />
+              <img src={Award1} alt="award6" className="award-icon" />
+              <img src={Award2} alt="award6" className="award-icon" />
+              <img src={Award3} alt="award6" className="award-icon" />
+              <img src={Award1} alt="award6" className="award-icon" />
+              <img src={Award2} alt="award6" className="award-icon isnot-get" />
+              <img src={Award3} alt="award6" className="award-icon isnot-get" />
+              <img src={Award1} alt="award6" className="award-icon isnot-get" />
+              <img src={Award2} alt="award6" className="award-icon isnot-get" />
+              <img src={Award3} alt="award6" className="award-icon isnot-get" />
+              <img src={Award1} alt="award6" className="award-icon isnot-get" />
+            </div>
           </div>
-        </div>
-        <div className="course-recomendation">
-          <h1 className='course-recomendation-title'>Курси для тебе</h1>
-          <div className="recomended-courses">
-            <img src={Biology} alt="course-icon" className='course-recomendation-icon' />
-            <img src={Chemistry} alt="course-icon" className='course-recomendation-icon' />
-            <img src={English} alt="course-icon" className='course-recomendation-icon' />
-            <img src={Geography} alt="course-icon" className='course-recomendation-icon' />
+          <div className="league">
+            <h1 className="awards-title">Ліга</h1>
+            <div className="main-user-table">
+              <a href="/" className="user-in-table">
+                <span className="main-table-place">1</span>
+                <div>
+                  <img src={User1} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">1300 XP</span>
+                </div>
+              </a>
+              <a href="/" className="user-in-table">
+                <span className="main-table-place">2</span>
+                <div>
+                  <img src={User2} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">1200 XP</span>
+                </div>
+              </a>
+              <a href="/" className="user-in-table">
+                <span className="main-table-place">3</span>
+                <div>
+                  <img src={User1} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">1100 XP</span>
+                </div>
+              </a>
+              <a href="/" className="user-in-table">
+                <span className="main-table-place">4</span>
+                <div>
+                  <img src={User2} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">1000 XP</span>
+                </div>
+              </a>
+              <a href="/" className="user-in-table">
+                <span className="main-table-place">5</span>
+                <div>
+                  <img src={User1} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">900 XP</span>
+                </div>
+              </a>
+              <a href="/" className="user-in-table you">
+                <span className="main-table-place">100</span>
+                <div>
+                  <img src={User2} alt="user-icon" className="main-table-user-icon" />
+                </div>
+                <div className="username-rate">
+                  <span className="main-table-username">Denys</span>
+                  <span className="main-table-rate">10 XP</span>
+                </div>
+              </a>
+              <span className="more-tables">Конфедерація...</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Main
+export default Main;
