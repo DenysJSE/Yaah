@@ -1,27 +1,7 @@
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #e0e0e0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #a7a7a7;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #797979;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #5c5c5c;
-}
-
 .mane-page {
   margin-top: 20px;
   margin-left: 10px;
+  user-select: none;
 }
 
 .user-description {
@@ -36,76 +16,68 @@
 }
 
 .user-name h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .user-facultet h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .user-rank h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .user-description-span {
   font-weight: 500;
   color: #C0A080;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 5px;
 }
 
-.user-awards {
-  margin-top: 20px;
+.current-course {
+  display: flex;
+  margin-top: 30px;
 }
 
-.awards-title {
-  text-align: center;
+.curent-course-icon {
+  width: 150px;
+}
+
+.main-information {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.course-name h1 {
+  font-weight: 600;
   font-size: 30px;
 }
 
-.awards-icons {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.award-icon {
-  width: 120px;
-  margin-right: 30px;
-}
-
-.more-awards {
-  text-align: center;
-  color: #C0A080;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.statistic-news {
+.lessons-test-progress {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-
-.award-list-item {
-  margin-top: 24px;
-  width: 450px;
-  align-items: center;
-  font-weight: 500;
+.lessons-test-progress-title {
+  font-size: 18px;
 }
 
-
-.award-progres {
+.lessons-progres {
+  margin-top: 10px;
+  grid-column: 2;
+  grid-row: 2;
   height: 20px;
   background-color: #e0e0e0;
   border-radius: 50px;
   position: relative;
+  width: 450px;
 }
 
-.award-progress-span {
+.lessons-progress-span {
   left: 50%;
   letter-spacing: .8px;
   position: absolute;
@@ -113,87 +85,79 @@
   transform: translateX(-50%);
   white-space: nowrap;
   font-weight: 700;
-  color: #A5A5A5;
+  color: #000000;
   z-index: 2;
 }
 
-.award-progres-passed {
-  width: 150px;
+.lessons-progres-passed {
+  width: 50px;
   height: 20px;
-  background-color: #44D910;
+  background-color: #2AAE09;
   border-radius: 50px;
   position: relative;
 }
 
-.award-progres-passed-blick {
-  background: #7DE858;
-  border-radius: inherit;
-  height: 30%;
-  left: 10px;
-  position: absolute;
-  top: 25%;
-  width: calc(100% - 20px);
+.lessons-progres-passed.lessons {
+  width: 180px;
 }
 
-.award-progres-passed.tests {
-  width: 130px;
+.lessons-progres-passed.tests {
+  width: 80px;
 }
 
-.award-progres-passed.tests-passed {
-  width: 400px;
+.tests-progress {
+  margin-left: 40px;
 }
 
-.award-progres-passed.rate {
-  width: 380px;
-}
-
-.award-list-item.last {
-  margin-bottom: 20px;
-}
-
-.news-list {
+.academy-link {
+  text-align: center;
   margin-top: 10px;
 }
 
-.news-item {
-  padding: 15px;
-  padding-inline: 30px;
-  border-radius: 10px;
-  color: #000;
-}
-
-.news-item:hover {
+.academy-link-span {
+  color: #C0A080;
   cursor: pointer;
-  background-color: #efefef;
 }
 
-.news-item.last {
-  margin-bottom: 20px;
+.course-recomendation {
+  margin-top: 40px;
+  text-align: center;
 }
+
+.course-recomendation-icon {
+  width: 150px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+
+.user-awards {
+  margin-top: 18px;
+}
+
+.awards-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.awards-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.award-icon {
+  width: 100px;
+  margin-right: 30px;
+}
+
+.award-icon.isnot-get {
+  filter: grayscale(100%);
+}
+
 
 /* Dark Theme */
 .main-page-dark-theme {
   background-color: #312e2b;
   color: #fff;
-}
-
-.main-page-dark-theme::-webkit-scrollbar {
-  width: 8px;
-}
-
-.main-page-dark-theme::-webkit-scrollbar-track {
-  background-color: #616161;
-}
-
-.main-page-dark-theme::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 20px;
-}
-
-.main-page-dark-theme::-webkit-scrollbar-thumb:hover {
-  background-color: #b9b9b9;
-}
-
-.main-page-dark-theme::-webkit-scrollbar-thumb:active {
-  background-color: #cccccc;
 }

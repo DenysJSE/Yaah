@@ -20,8 +20,8 @@ body::-webkit-scrollbar {
   left: 260px;
   right: 0;
   bottom: 0;
-  overflow: auto;
   padding: 40px;
   color: #7882A4;
   z-index: 1;
+  overflow: auto;
 }
