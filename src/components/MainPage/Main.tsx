@@ -6,6 +6,7 @@ import Award3 from "../../images/Award3.png";
 import History from "../../images/History.png";
 import User1 from "../../images/photo1.jpg";
 import User2 from "../../images/photo2.jpg";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   isWhiteTheme: boolean;
@@ -37,7 +38,9 @@ function Main({ isWhiteTheme }: HeaderProps) {
                   </div>
                 </div>
                 <div className="academy-link">
-                  <span className="academy-link-span">Перейти в Академію</span>
+                  <Link to="/academy" className="link">
+                    <span className="academy-link-span">Перейти в Академію</span>
+                  </Link>
                 </div>
               </div>
               <div className="tests-progress">
@@ -51,9 +54,11 @@ function Main({ isWhiteTheme }: HeaderProps) {
                   </div>
                 </div>
                 <div className="academy-link">
-                  <span className="academy-link-span">
-                    Перейти в Лабораторію
-                  </span>
+                  <Link to="/lab" className="link">
+                    <span className="academy-link-span">
+                      Перейти в Лабораторію
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>

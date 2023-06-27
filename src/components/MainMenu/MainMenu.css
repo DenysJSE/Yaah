@@ -145,3 +145,57 @@
 .user-link-active-dark-theme:hover {
   background-color: rgba(29, 29, 29);
 }
+
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  .main-menu {
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    border-right: 0;
+    border-top: 1px solid #d1d1d1;
+    top: auto;
+  }
+
+  .user-options {
+    display: none;
+  }
+
+  .navbar {
+    margin: 0;
+  }
+
+  .navbar-li {
+    display: none;
+  }
+
+  .navbar-ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-logo {
+    margin-right: 0;
+  }
+
+  .link.info {
+    display: none;
+  }
+  
+  .navbar-item {
+    margin-top: 5px;
+    padding-inline: 12px;
+  }
+
+  .link-active {
+    padding-inline: 10px;
+  }
+
+  
+}

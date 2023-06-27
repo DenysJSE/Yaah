@@ -112,3 +112,37 @@
 .title-text-dark-theme {
   color: #fff;
 }
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  .header {
+    min-height: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .header-img {
+    width: 25px;
+  }
+
+  .award-items-text {
+    font-size: 14px;
+  }
+
+  .award-items {
+    padding-inline: 5px;
+  }
+
+  .award-items:hover {
+    background-color: #ffffff;
+  }
+
+  .award-description {
+    display: none;
+  }
+}

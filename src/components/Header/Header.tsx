@@ -1,6 +1,5 @@
 import "./Header.css";
 import RatingStar from '../../images/star.png'
-import Diamonds from '../../images/diamond.png'
 import Coins from '../../images/coin.png'
 import Scrolles from '../../images/scroll.png'
 import AwardItems from "./AwardItems";
@@ -26,13 +25,6 @@ function Header({ isWhiteTheme }: HeaderProps) {
             altText="rate"
             awardText="1500"
             description="Рейтинг - одиниця, яку ти отримуєш за проходження уроків та тестів. Більший рейтинг - вище звання!"
-            isWhiteTheme={isWhiteTheme}
-          />
-          <AwardItems
-            imageSrc={Diamonds}
-            altText="diamonds"
-            awardText="500"
-            description="Діаманти - одиниця, яку ти отримуєш за проходження уроків та тестів. Ти можеш їх використати, щоб спростити проходження тестів (використати підказку, збільшити час, тощо)."
             isWhiteTheme={isWhiteTheme}
           />
           <AwardItems

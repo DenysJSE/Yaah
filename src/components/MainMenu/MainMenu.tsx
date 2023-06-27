@@ -76,7 +76,7 @@ function MainMenu({ isWhiteTheme, handleThemeChange, isLogin, handleLogin, handl
               <li className='navbar-li'>Пошта</li>
             </div>
           </Link>
-          <Link to="/info" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+          <Link to="/info" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'} info`}>
             <div className={getItemNavbarClass('/info')} onClick={() => setActiveItem('/info')}>
               <img src={InfoLogo} alt="InfoLogo" className='navbar-logo' />
               <li className='navbar-li'>Довідник</li>

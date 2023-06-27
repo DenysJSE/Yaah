@@ -1,6 +1,6 @@
 /* Main Page */
 .main-page {
-  margin-left: 10px;
+  margin-top: 50px;
   user-select: none;
 }
 
@@ -10,38 +10,40 @@
 }
 
 .curent-course-icon {
-  width: 150px;
+  width: 110px;
+  height: 110px;
 }
 
 .main-information {
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .course-name h1 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .lessons-test-progress {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .lessons-test-progress-title {
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .lessons-progres {
   margin-top: 10px;
   grid-column: 2;
   grid-row: 2;
-  height: 20px;
+  height: 18px;
   background-color: #e0e0e0;
   border-radius: 50px;
   position: relative;
-  width: 480px;
+  width: 400px;
 }
 
 .lessons-progress-span {
@@ -54,11 +56,12 @@
   font-weight: 700;
   color: #000000;
   z-index: 2;
+  font-size: 14px;
 }
 
 .lessons-progres-passed {
   width: 50px;
-  height: 20px;
+  height: 18px;
   background-color: #2AAE09;
   border-radius: 50px;
   position: relative;
@@ -73,7 +76,7 @@
 }
 
 .tests-progress {
-  margin-left: 80px;
+  margin-left: 70px;
 }
 
 .academy-link {
@@ -84,6 +87,7 @@
 .academy-link-span {
   color: #C0A080;
   cursor: pointer;
+  font-size: 16px;
 }
 
 /* Awards */
@@ -94,12 +98,12 @@
 
 .user-awards {
   margin-top: 48px;
-  width: 490px;
+  width: 450px;
 }
 
 .awards-title {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .awards-icons {
@@ -111,7 +115,7 @@
 }
 
 .award-icon {
-  width: 100px;
+  width: 90px;
 }
 
 .award-icon.isnot-get {
@@ -121,7 +125,7 @@
 /* League */
 .league {
   margin-top: 48px;
-  width: 650px;
+  width: 600px;
 }
 
 .main-user-table {
@@ -187,4 +191,56 @@
 .main-page-dark-theme {
   background-color: #312e2b;
   color: #fff;
+}
+
+@media (max-width: 400px) {
+  .main-page {
+    margin: 0;
+    padding-left: 20px;
+    margin-bottom: 100px;
+  }
+
+  .current-course {
+    display: grid;
+  }
+
+  .lessons-test-progress {
+    display: grid;
+  }
+
+  .tests-progress {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .main-information {
+    margin-left: 0;
+  }
+
+  .lessons-progres {
+    width: 350px;
+  }
+
+  .user-awards {
+    width: 350px;
+  }
+
+  .awards-icons {
+    justify-content: space-between;
+  }
+
+  .league {
+    display: none;
+  }
+
+  .course-name h1 {
+    position: absolute;
+    top: 140px;
+    left: 150px;
+    font-size: 30px;
+  }
+  
+  .lessons-test-progress-title {
+    text-align: left;
+  }
 }
