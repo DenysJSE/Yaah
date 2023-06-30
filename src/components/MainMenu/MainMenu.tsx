@@ -101,7 +101,7 @@ function MainMenu({ isWhiteTheme, handleThemeChange, isLogin, handleLogin, handl
               </div>
             </Link>
           ) : (
-            <Link to="/login" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
+            <Link to="/enter-option" className={`link ${isWhiteTheme ? 'white-theme' : 'link-dark-theme'}`}>
               <div className={getItemUserOptionsClass('/login-form')} onClick={() => setActiveItem('/login-form')}>
                 <img src={UserAccount} alt="AcademyLogo" className='user-options-logo' />
                 <li className='user-options-li'>Приєднатися</li>

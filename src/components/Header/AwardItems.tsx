@@ -40,7 +40,7 @@ const AwardItems: React.FC<AwardItemProps> = ({
           <span className={`description-space ${isWhiteTheme ? 'white-theme' : 'description-space-dark-theme'}`}>s</span>
           <p className='description-text'>{description}</p>
           <div className='more-information'>
-            <a href="/" className='more-information-link'>Детальніше</a>
+            <a href="/info" className='more-information-link'>Детальніше</a>
           </div>
         </div>
       )}

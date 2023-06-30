@@ -1,0 +1,14 @@
+.fac-description {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1000px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+  .fac-description {
+    width: 100%;
+  }
+}

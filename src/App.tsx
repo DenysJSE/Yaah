@@ -16,6 +16,8 @@ import Info from './components/Info/Info.tsx';
 import Settings from './components/Settings/Settings.tsx';
 import { ThemeContext } from './store/ThemeComponentProvider.tsx';
 import Missions from './components/Missions/Missions.tsx';
+import Registration from './components/Login/Registration.tsx';
+import LoginOrReg from './components/Login/LoginOrReg.tsx';
 
 function App() {
   const [isWhiteTheme, setIsWhiteTheme] = useState(() => {
@@ -109,27 +111,21 @@ function App() {
           isWhiteTheme={isWhiteTheme}
           isLogin={isLogin}  
         />
-          <div className='content'>
-            <Routes>
-              <Route path='/' element={<Main isWhiteTheme={isWhiteTheme} />} />
-              <Route 
-                path='login' 
-                element={<Login 
-                  isWhiteTheme={isWhiteTheme}
-                  handleLogin={handleLogin}
-                />} 
-              />
-              <Route path='academy' element={<Academy isWhiteTheme={isWhiteTheme} />} />
-              <Route path='lab' element={<Lab isWhiteTheme={isWhiteTheme} />} />
-              <Route path='league' element={<Leagues isWhiteTheme={isWhiteTheme} />} />
-              <Route path='shop' element={<Shop isWhiteTheme={isWhiteTheme} />} />
-              <Route path='email' element={<Email isWhiteTheme={isWhiteTheme} />} />
-              <Route path='info' element={<Info isWhiteTheme={isWhiteTheme} />} />
-              <Route path='user-cab' element={<UserCab isWhiteTheme={isWhiteTheme} />} />
-              <Route path='settings' element={<Settings isWhiteTheme={isWhiteTheme} />} />
-              <Route path='*' element={<PageNotFound isWhiteTheme={isWhiteTheme} />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path='/' element={<Main isWhiteTheme={isWhiteTheme} />} />
+            <Route path='enter-option' element={<LoginOrReg isWhiteTheme={isWhiteTheme} />} />
+            <Route path='login' element={<Login isWhiteTheme={isWhiteTheme} handleLogin={handleLogin} />} />
+            <Route path='registration' element={<Registration isWhiteTheme={isWhiteTheme} handleLogin={handleLogin} />} />
+            <Route path='academy' element={<Academy isWhiteTheme={isWhiteTheme} />} />
+            <Route path='lab' element={<Lab isWhiteTheme={isWhiteTheme} />} />
+            <Route path='league' element={<Leagues isWhiteTheme={isWhiteTheme} />} />
+            <Route path='shop' element={<Shop isWhiteTheme={isWhiteTheme} />} />
+            <Route path='email' element={<Email isWhiteTheme={isWhiteTheme} />} />
+            <Route path='info' element={<Info isWhiteTheme={isWhiteTheme} />} />
+            <Route path='user-cab' element={<UserCab isWhiteTheme={isWhiteTheme} />} />
+            <Route path='settings' element={<Settings isWhiteTheme={isWhiteTheme} />} />
+            <Route path='*' element={<PageNotFound isWhiteTheme={isWhiteTheme} />} />
+          </Routes>
       </>
     </BrowserRouter>
   )
